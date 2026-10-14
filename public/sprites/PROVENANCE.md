@@ -1,0 +1,1 @@
+Existing Clash of Clans assets from clash-of-clans-data 0.18.1. Cropped transparent margins and resized to 192px for web delivery. Source: https://github.com/chiefpansancolt/clash-of-clans-data. No new artwork generated.

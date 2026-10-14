@@ -1,0 +1,39 @@
+{
+  "name": "coc",
+  "version": "1.0.0",
+  "description": "Clash of Clans wall art and base blueprint editor",
+  "main": "index.js",
+  "scripts": {
+    "test": "tsx --test tests/*.test.ts",
+    "test:vietnamese": "tsx scripts/scan-vietnamese.ts",
+    "review:vietnamese": "node scripts/capture-vietnamese.mjs",
+    "dev": "vite --host 127.0.0.1 --port 5173 --strictPort",
+    "build": "tsc --noEmit && vite build",
+    "preview": "vite preview --host 127.0.0.1 --port 4173 --strictPort",
+    "data:prepare": "node scripts/prepare-web-data.mjs",
+    "fonts:prepare": "node scripts/prepare-art-fonts.mjs",
+    "test:e2e": "playwright test"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "dependencies": {
+    "clash-of-clans-data": "^0.18.1",
+    "lucide-react": "^1.52.0",
+    "react": "^19.3.0",
+    "react-dom": "^19.3.0",
+    "sharp": "^0.35.5"
+  },
+  "devDependencies": {
+    "@playwright/test": "^1.63.0",
+    "@types/node": "^26.6.4",
+    "@types/react": "^19.3.0",
+    "@types/react-dom": "^19.3.0",
+    "opentype.js": "^2.0.0",
+    "prettier": "^3.9.9",
+    "tsx": "^4.23.15",
+    "typescript": "^7.0.2",
+    "vite": "^8.3.2"
+  }
+}

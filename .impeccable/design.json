@@ -1,0 +1,511 @@
+{
+  "schemaVersion": 2,
+  "generatedAt": "2026-10-04T22:26:10.014Z",
+  "title": "Design System: Wallcraft",
+  "extensions": {
+    "colorMeta": {
+      "navy-ink": {
+        "role": "primary",
+        "displayName": "Navy Ink",
+        "tonalRamp": [
+          "oklch(15.00% 0.0449 246.22)",
+          "oklch(26.43% 0.0449 246.22)",
+          "oklch(37.86% 0.0449 246.22)",
+          "oklch(49.29% 0.0449 246.22)",
+          "oklch(60.71% 0.0449 246.22)",
+          "oklch(72.14% 0.0449 246.22)",
+          "oklch(83.57% 0.0449 246.22)",
+          "oklch(95.00% 0.0449 246.22)"
+        ]
+      },
+      "muted-ink": {
+        "role": "neutral",
+        "displayName": "Muted Ink",
+        "tonalRamp": [
+          "oklch(15.00% 0.0325 243.60)",
+          "oklch(26.43% 0.0325 243.60)",
+          "oklch(37.86% 0.0325 243.60)",
+          "oklch(49.29% 0.0325 243.60)",
+          "oklch(60.71% 0.0325 243.60)",
+          "oklch(72.14% 0.0325 243.60)",
+          "oklch(83.57% 0.0325 243.60)",
+          "oklch(95.00% 0.0325 243.60)"
+        ]
+      },
+      "paper": {
+        "role": "neutral",
+        "displayName": "Paper",
+        "tonalRamp": [
+          "oklch(15.00% 0.0000 89.88)",
+          "oklch(26.43% 0.0000 89.88)",
+          "oklch(37.86% 0.0000 89.88)",
+          "oklch(49.29% 0.0000 89.88)",
+          "oklch(60.71% 0.0000 89.88)",
+          "oklch(72.14% 0.0000 89.88)",
+          "oklch(83.57% 0.0000 89.88)",
+          "oklch(95.00% 0.0000 89.88)"
+        ]
+      },
+      "workspace": {
+        "role": "neutral",
+        "displayName": "Workspace",
+        "tonalRamp": [
+          "oklch(15.00% 0.0059 239.82)",
+          "oklch(26.43% 0.0059 239.82)",
+          "oklch(37.86% 0.0059 239.82)",
+          "oklch(49.29% 0.0059 239.82)",
+          "oklch(60.71% 0.0059 239.82)",
+          "oklch(72.14% 0.0059 239.82)",
+          "oklch(83.57% 0.0059 239.82)",
+          "oklch(95.00% 0.0059 239.82)"
+        ]
+      },
+      "soft-surface": {
+        "role": "neutral",
+        "displayName": "Soft Surface",
+        "tonalRamp": [
+          "oklch(15.00% 0.0067 233.64)",
+          "oklch(26.43% 0.0067 233.64)",
+          "oklch(37.86% 0.0067 233.64)",
+          "oklch(49.29% 0.0067 233.64)",
+          "oklch(60.71% 0.0067 233.64)",
+          "oklch(72.14% 0.0067 233.64)",
+          "oklch(83.57% 0.0067 233.64)",
+          "oklch(95.00% 0.0067 233.64)"
+        ]
+      },
+      "inset-surface": {
+        "role": "neutral",
+        "displayName": "Inset Surface",
+        "tonalRamp": [
+          "oklch(15.00% 0.0025 228.78)",
+          "oklch(26.43% 0.0025 228.78)",
+          "oklch(37.86% 0.0025 228.78)",
+          "oklch(49.29% 0.0025 228.78)",
+          "oklch(60.71% 0.0025 228.78)",
+          "oklch(72.14% 0.0025 228.78)",
+          "oklch(83.57% 0.0025 228.78)",
+          "oklch(95.00% 0.0025 228.78)"
+        ]
+      },
+      "divider": {
+        "role": "neutral",
+        "displayName": "Divider",
+        "tonalRamp": [
+          "oklch(15.00% 0.0110 234.83)",
+          "oklch(26.43% 0.0110 234.83)",
+          "oklch(37.86% 0.0110 234.83)",
+          "oklch(49.29% 0.0110 234.83)",
+          "oklch(60.71% 0.0110 234.83)",
+          "oklch(72.14% 0.0110 234.83)",
+          "oklch(83.57% 0.0110 234.83)",
+          "oklch(95.00% 0.0110 234.83)"
+        ]
+      },
+      "field-border": {
+        "role": "neutral",
+        "displayName": "Field Border",
+        "tonalRamp": [
+          "oklch(15.00% 0.0163 239.13)",
+          "oklch(26.43% 0.0163 239.13)",
+          "oklch(37.86% 0.0163 239.13)",
+          "oklch(49.29% 0.0163 239.13)",
+          "oklch(60.71% 0.0163 239.13)",
+          "oklch(72.14% 0.0163 239.13)",
+          "oklch(83.57% 0.0163 239.13)",
+          "oklch(95.00% 0.0163 239.13)"
+        ]
+      },
+      "brand-orange": {
+        "role": "primary",
+        "displayName": "Brand Orange",
+        "tonalRamp": [
+          "oklch(15.00% 0.1553 48.50)",
+          "oklch(26.43% 0.1553 48.50)",
+          "oklch(37.86% 0.1553 48.50)",
+          "oklch(49.29% 0.1553 48.50)",
+          "oklch(60.71% 0.1553 48.50)",
+          "oklch(72.14% 0.1553 48.50)",
+          "oklch(83.57% 0.1553 48.50)",
+          "oklch(95.00% 0.1553 48.50)"
+        ]
+      },
+      "active-orange": {
+        "role": "primary",
+        "displayName": "Active Orange",
+        "tonalRamp": [
+          "oklch(15.00% 0.1482 45.99)",
+          "oklch(26.43% 0.1482 45.99)",
+          "oklch(37.86% 0.1482 45.99)",
+          "oklch(49.29% 0.1482 45.99)",
+          "oklch(60.71% 0.1482 45.99)",
+          "oklch(72.14% 0.1482 45.99)",
+          "oklch(83.57% 0.1482 45.99)",
+          "oklch(95.00% 0.1482 45.99)"
+        ]
+      },
+      "tool-fill": {
+        "role": "primary",
+        "displayName": "Tool Fill",
+        "tonalRamp": [
+          "oklch(15.00% 0.0566 65.30)",
+          "oklch(26.43% 0.0566 65.30)",
+          "oklch(37.86% 0.0566 65.30)",
+          "oklch(49.29% 0.0566 65.30)",
+          "oklch(60.71% 0.0566 65.30)",
+          "oklch(72.14% 0.0566 65.30)",
+          "oklch(83.57% 0.0566 65.30)",
+          "oklch(95.00% 0.0566 65.30)"
+        ]
+      },
+      "tool-ink": {
+        "role": "primary",
+        "displayName": "Tool Ink",
+        "tonalRamp": [
+          "oklch(15.00% 0.1196 48.23)",
+          "oklch(26.43% 0.1196 48.23)",
+          "oklch(37.86% 0.1196 48.23)",
+          "oklch(49.29% 0.1196 48.23)",
+          "oklch(60.71% 0.1196 48.23)",
+          "oklch(72.14% 0.1196 48.23)",
+          "oklch(83.57% 0.1196 48.23)",
+          "oklch(95.00% 0.1196 48.23)"
+        ]
+      },
+      "motif-fill": {
+        "role": "primary",
+        "displayName": "Motif Fill",
+        "tonalRamp": [
+          "oklch(15.00% 0.0188 67.60)",
+          "oklch(26.43% 0.0188 67.60)",
+          "oklch(37.86% 0.0188 67.60)",
+          "oklch(49.29% 0.0188 67.60)",
+          "oklch(60.71% 0.0188 67.60)",
+          "oklch(72.14% 0.0188 67.60)",
+          "oklch(83.57% 0.0188 67.60)",
+          "oklch(95.00% 0.0188 67.60)"
+        ]
+      },
+      "motif-ink": {
+        "role": "primary",
+        "displayName": "Motif Ink",
+        "tonalRamp": [
+          "oklch(15.00% 0.1257 50.10)",
+          "oklch(26.43% 0.1257 50.10)",
+          "oklch(37.86% 0.1257 50.10)",
+          "oklch(49.29% 0.1257 50.10)",
+          "oklch(60.71% 0.1257 50.10)",
+          "oklch(72.14% 0.1257 50.10)",
+          "oklch(83.57% 0.1257 50.10)",
+          "oklch(95.00% 0.1257 50.10)"
+        ]
+      },
+      "village-green": {
+        "role": "secondary",
+        "displayName": "Village Green",
+        "tonalRamp": [
+          "oklch(15.00% 0.0431 155.17)",
+          "oklch(26.43% 0.0431 155.17)",
+          "oklch(37.86% 0.0431 155.17)",
+          "oklch(49.29% 0.0431 155.17)",
+          "oklch(60.71% 0.0431 155.17)",
+          "oklch(72.14% 0.0431 155.17)",
+          "oklch(83.57% 0.0431 155.17)",
+          "oklch(95.00% 0.0431 155.17)"
+        ]
+      },
+      "budget-green": {
+        "role": "secondary",
+        "displayName": "Budget Green",
+        "tonalRamp": [
+          "oklch(15.00% 0.0633 151.20)",
+          "oklch(26.43% 0.0633 151.20)",
+          "oklch(37.86% 0.0633 151.20)",
+          "oklch(49.29% 0.0633 151.20)",
+          "oklch(60.71% 0.0633 151.20)",
+          "oklch(72.14% 0.0633 151.20)",
+          "oklch(83.57% 0.0633 151.20)",
+          "oklch(95.00% 0.0633 151.20)"
+        ]
+      },
+      "status-green": {
+        "role": "secondary",
+        "displayName": "Status Green",
+        "tonalRamp": [
+          "oklch(15.00% 0.0600 150.00)",
+          "oklch(26.43% 0.0600 150.00)",
+          "oklch(37.86% 0.0600 150.00)",
+          "oklch(49.29% 0.0600 150.00)",
+          "oklch(60.71% 0.0600 150.00)",
+          "oklch(72.14% 0.0600 150.00)",
+          "oklch(83.57% 0.0600 150.00)",
+          "oklch(95.00% 0.0600 150.00)"
+        ]
+      },
+      "error-ink": {
+        "role": "primary",
+        "displayName": "Error Ink",
+        "tonalRamp": [
+          "oklch(15.00% 0.1461 35.83)",
+          "oklch(26.43% 0.1461 35.83)",
+          "oklch(37.86% 0.1461 35.83)",
+          "oklch(49.29% 0.1461 35.83)",
+          "oklch(60.71% 0.1461 35.83)",
+          "oklch(72.14% 0.1461 35.83)",
+          "oklch(83.57% 0.1461 35.83)",
+          "oklch(95.00% 0.1461 35.83)"
+        ]
+      },
+      "wall-gold": {
+        "role": "secondary",
+        "displayName": "Wall Gold",
+        "tonalRamp": [
+          "oklch(15.00% 0.0975 88.10)",
+          "oklch(26.43% 0.0975 88.10)",
+          "oklch(37.86% 0.0975 88.10)",
+          "oklch(49.29% 0.0975 88.10)",
+          "oklch(60.71% 0.0975 88.10)",
+          "oklch(72.14% 0.0975 88.10)",
+          "oklch(83.57% 0.0975 88.10)",
+          "oklch(95.00% 0.0975 88.10)"
+        ]
+      }
+    },
+    "typographyMeta": {
+      "headline": {
+        "displayName": "Headline",
+        "purpose": "Compact main page heading; responsive sizes are documented in Layout."
+      },
+      "title": {
+        "displayName": "Section Title",
+        "purpose": "Panel headings and settings sections."
+      },
+      "body": {
+        "displayName": "Body",
+        "purpose": "Default DOM type with compact secondary copy."
+      },
+      "label": {
+        "displayName": "Label",
+        "purpose": "Form labels and supporting controls."
+      },
+      "text-preview": {
+        "displayName": "Text Preview",
+        "purpose": "Large name-entry textarea."
+      }
+    },
+    "shadows": [
+      {
+        "name": "selected-mode",
+        "value": "0 2px 6px #172d4010",
+        "purpose": "Separate the selected creation mode from its tonal well."
+      },
+      {
+        "name": "canvas-toolbar",
+        "value": "0 5px 18px #10271835",
+        "purpose": "Float edit tools above the village."
+      },
+      {
+        "name": "export-menu",
+        "value": "0 8px 35px #172d4030",
+        "purpose": "Separate the export menu from the workbench."
+      },
+      {
+        "name": "toast",
+        "value": "0 8px 25px #172d4030",
+        "purpose": "Lift transient feedback above the page."
+      },
+      {
+        "name": "mobile-preview",
+        "value": "0 5px 15px #172d401c",
+        "purpose": "Separate the sticky quick preview from scrolling settings."
+      }
+    ],
+    "motion": [
+      {
+        "name": "button-state",
+        "value": "background 0.16s, color 0.16s",
+        "purpose": "Instant-feeling state feedback without translation."
+      },
+      {
+        "name": "loading-spin",
+        "value": "spin 1s linear infinite",
+        "purpose": "Loading indicator only; disabled under reduced motion."
+      },
+      {
+        "name": "reduced-motion",
+        "value": "animation: none !important; transition: none !important; scroll-behavior: auto !important",
+        "purpose": "Applied globally for prefers-reduced-motion: reduce."
+      }
+    ],
+    "breakpoints": [
+      {
+        "name": "wide-masthead",
+        "value": "1600px",
+        "condition": "min-width"
+      },
+      {
+        "name": "compact-desktop",
+        "value": "1100px",
+        "condition": "max-width"
+      },
+      {
+        "name": "mobile",
+        "value": "800px",
+        "condition": "max-width"
+      },
+      {
+        "name": "small-mobile",
+        "value": "400px",
+        "condition": "max-width"
+      }
+    ],
+    "focus": {
+      "value": "3px solid #b95316",
+      "offset": "3px",
+      "purpose": "Visible keyboard focus on interactive DOM controls."
+    },
+    "canvas": {
+      "gridSize": 44,
+      "coordinateRange": "0–43",
+      "isometricUnit": "min(width / 92, height / 56)",
+      "origin": "width / 2, height * 0.14",
+      "tileColors": [
+        "#4a6a49",
+        "#4e704d"
+      ],
+      "gridStroke": "#65805b",
+      "perimeterStroke": "#92a67a",
+      "purpose": "Countable plan and village geometry with sprite headroom."
+    },
+    "tonalRampNote": "Synthesized OKLCH ramps are display metadata only; they do not introduce additional shipped colors.",
+    "sourceFiles": [
+      "src/style.css",
+      "src/App.tsx",
+      "src/lib/render.ts",
+      "src/components/WallCanvas.tsx",
+      "public/fonts/fonts.css"
+    ]
+  },
+  "components": [
+    {
+      "name": "Primary Button",
+      "kind": "button",
+      "refersTo": "button-primary",
+      "description": "Navy export action; disabled until the blueprint is ready.",
+      "html": "<button class=\"ds-primary\">Tải bản dựng</button>",
+      "css": ".ds-primary{font-family:\"Be Vietnam Pro\",sans-serif;display:inline-flex;align-items:center;justify-content:center;gap:8px;border-radius:8px;min-height:39px;padding:9px 14px;font-size:13px;font-weight:600;white-space:nowrap;cursor:pointer;transition:background .16s,color .16s;background:var(--ink,#172d40);color:var(--white,#fff);border:1px solid var(--ink,#172d40)}.ds-primary:hover:not(:disabled){background:#29465c}.ds-primary:focus-visible{outline:3px solid var(--accent,#b95316);outline-offset:3px;}.ds-primary:disabled{opacity:.44;cursor:not-allowed}@media(max-width:800px){.ds-primary{min-height:44px}}"
+    },
+    {
+      "name": "Secondary Button",
+      "kind": "button",
+      "refersTo": "button-secondary",
+      "description": "Import, share and explicit coordinate actions.",
+      "html": "<button class=\"ds-secondary\">Chia sẻ mẫu</button>",
+      "css": ".ds-secondary{font-family:\"Be Vietnam Pro\",sans-serif;display:inline-flex;align-items:center;justify-content:center;gap:8px;border-radius:8px;min-height:39px;padding:9px 14px;font-size:13px;font-weight:600;white-space:nowrap;cursor:pointer;transition:background .16s,color .16s;background:#fff;color:var(--ink,#172d40);border:1px solid #ced9e2}.ds-secondary:hover:not(:disabled){background:#f1f5f7;border-color:#a4b6c4}.ds-secondary:focus-visible{outline:3px solid var(--accent,#b95316);outline-offset:3px;}.ds-secondary:disabled{opacity:.44;cursor:not-allowed}@media(max-width:800px){.ds-secondary{min-height:44px}}"
+    },
+    {
+      "name": "Quiet Button",
+      "kind": "button",
+      "refersTo": "button-quiet",
+      "description": "Help and small dismissal actions.",
+      "html": "<button class=\"ds-quiet\">Hướng dẫn</button>",
+      "css": ".ds-quiet{font-family:\"Be Vietnam Pro\",sans-serif;display:inline-flex;align-items:center;justify-content:center;gap:8px;border-radius:8px;min-height:39px;padding:9px 14px;font-size:13px;font-weight:600;white-space:nowrap;cursor:pointer;transition:background .16s,color .16s;padding:8px;background:transparent;border:0;color:var(--muted,#536574)}.ds-quiet:hover{background:#e2e9ee;color:var(--ink,#172d40)}.ds-quiet:focus-visible{outline:3px solid var(--accent,#b95316);outline-offset:3px;}@media(max-width:800px){.ds-quiet{min-height:44px}}"
+    },
+    {
+      "name": "Canvas Icon Tool",
+      "kind": "button",
+      "refersTo": "button-icon",
+      "description": "Compact canvas toolbar; selected tools have a warm orange state.",
+      "html": "<button class=\"ds-icon ds-selected\" aria-label=\"Dịch mẫu lên\" aria-pressed=\"true\"><svg width=\"17\" height=\"17\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\" aria-hidden=\"true\"><path d=\"m5 12 7-7 7 7\"/><path d=\"M12 19V5\"/></svg></button>",
+      "css": ".ds-icon{font-family:\"Be Vietnam Pro\",sans-serif;display:inline-flex;align-items:center;justify-content:center;width:34px;height:34px;border:0;border-radius:6px;background:transparent;color:var(--muted,#536574);cursor:pointer;transition:background .16s,color .16s}.ds-icon:hover:not(:disabled){background:#e8eef2;color:var(--ink,#172d40)}.ds-icon.ds-selected{background:#ffddbd;color:#853900}.ds-icon:focus-visible{outline:3px solid var(--accent,#b95316);outline-offset:3px;}.ds-icon:disabled{opacity:.44;cursor:not-allowed}@media(max-width:800px){.ds-icon{width:44px;height:44px}}"
+    },
+    {
+      "name": "Name Entry",
+      "kind": "input",
+      "refersTo": "text-entry",
+      "description": "Large Vietnamese name entry with restrained supporting label.",
+      "html": "<label class=\"ds-entry\">Tên, biệt danh hoặc lời nhắn<textarea class=\"ds-text\" rows=\"2\" spellcheck=\"false\">LINH</textarea></label>",
+      "css": ".ds-entry{font-family:\"Be Vietnam Pro\",sans-serif;display:block;font-size:11px;font-weight:500;color:var(--ink,#172d40)}.ds-text{font-family:\"Be Vietnam Pro\",sans-serif;display:block;margin-top:9px;width:100%;min-height:82px;max-height:160px;resize:vertical;padding:12px 13px;border:1px solid #ccd7df;border-radius:8px;background:#fafcfd;color:var(--ink,#172d40);font-size:22px;font-weight:700;line-height:1.45;letter-spacing:.035em;caret-color:var(--accent,#b95316)}.ds-text:focus-visible{outline:3px solid var(--accent,#b95316);outline-offset:3px;}@media(max-width:800px){.ds-entry{font-size:12px}.ds-text{font-size:23px;min-height:70px}}"
+    },
+    {
+      "name": "Creation Mode Switch",
+      "kind": "nav",
+      "refersTo": "mode-switch",
+      "description": "Grouped creation choices with explicit pressed-state semantics.",
+      "html": "<div class=\"ds-modes\" role=\"group\" aria-label=\"Loại mẫu\"><button class=\"ds-mode ds-selected\" aria-pressed=\"true\">Tạo chữ</button><button class=\"ds-mode\" aria-pressed=\"false\">Thư viện hình</button></div>",
+      "css": ".ds-modes{display:flex;gap:3px;padding:4px;border-radius:8px;background:#edf2f5}.ds-mode{font-family:\"Be Vietnam Pro\",sans-serif;flex:1;display:flex;align-items:center;justify-content:center;border:0;border-radius:6px;background:transparent;color:var(--muted,#536574);padding:10px 3px;font-size:11px;font-weight:600;cursor:pointer;transition:background .16s,color .16s}.ds-mode.ds-selected{background:#fff;color:var(--ink,#172d40);box-shadow:0 2px 6px #172d4010}.ds-mode:hover:not(.ds-selected){background:#e2e9ef}.ds-mode:focus-visible{outline:3px solid var(--accent,#b95316);outline-offset:3px;}@media(max-width:800px){.ds-mode{font-size:12px}}"
+    },
+    {
+      "name": "Town Hall Badge",
+      "kind": "chip",
+      "refersTo": "hall-badge",
+      "description": "Small contextual Town Hall marker in the workbench heading.",
+      "html": "<span class=\"ds-badge\">TH16</span>",
+      "css": ".ds-badge{font-family:\"Be Vietnam Pro\",sans-serif;display:inline-block;padding:3px 6px;color:#586d7d;background:#edf2f5;border-radius:4px;font-size:9px;font-weight:600}"
+    },
+    {
+      "name": "Construction Panel",
+      "kind": "card",
+      "refersTo": "panel",
+      "description": "Flat bordered white surface with a compact section heading.",
+      "html": "<section class=\"ds-panel\"><h2 class=\"ds-panel-title\">Ngôi làng của bạn</h2><p class=\"ds-panel-note\">Tường cấp 17 · 325 viên khả dụng</p></section>",
+      "css": ".ds-panel{font-family:\"Be Vietnam Pro\",sans-serif;padding:22px;background:#fff;border:1px solid var(--line,#dbe3e8);border-radius:var(--radius,14px);color:var(--ink,#172d40)}.ds-panel-title{margin:0;font-size:13px;font-weight:600}.ds-panel-note{margin:14px 0 0;font-size:10px;color:var(--muted,#536574)}@media(max-width:800px){.ds-panel{padding:18px}}"
+    },
+    {
+      "name": "Selected Motif",
+      "kind": "custom",
+      "refersTo": "motif-selected",
+      "description": "A cell-art motif card whose selected state has a border and check.",
+      "html": "<button class=\"ds-motif\" aria-pressed=\"true\"><svg class=\"ds-motif-preview\" viewBox=\"0 0 64 64\" aria-hidden=\"true\"><path d=\"M30 6h4v32h8v4h-8v16h-4V42h-8v-4h8z\" fill=\"none\" stroke=\"currentColor\"/></svg><span class=\"ds-motif-name\">Thanh kiếm</span><svg class=\"ds-motif-check\" width=\"13\" height=\"13\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" aria-hidden=\"true\"><path d=\"m20 6-11 11-5-5\"/></svg></button>",
+      "css": ".ds-motif{font-family:\"Be Vietnam Pro\",sans-serif;position:relative;display:flex;flex-direction:column;align-items:center;gap:7px;min-height:98px;padding:10px 6px 9px;border:1px solid #cd732d;border-radius:8px;background:#fff4e9;color:#9f4e15;cursor:pointer;transition:background .16s,color .16s}.ds-motif:hover{background:#edf3f6}.ds-motif:focus-visible{outline:3px solid var(--accent,#b95316);outline-offset:3px;}.ds-motif-preview{width:62px;height:58px}.ds-motif-name{font-size:10px;color:var(--ink,#172d40)}.ds-motif-check{position:absolute;top:6px;right:6px}@media(max-width:800px){.ds-motif{min-height:88px;padding:9px 3px}.ds-motif-preview{width:48px;height:48px}}"
+    },
+    {
+      "name": "Wall Budget",
+      "kind": "custom",
+      "refersTo": "budget",
+      "description": "A readable material count, usage bar and remaining-wall sentence.",
+      "html": "<section class=\"ds-budget\" aria-label=\"Ngân sách tường\"><div class=\"ds-budget-heading\"><span>Tường sử dụng</span><strong class=\"ds-budget-count\">168<span class=\"ds-budget-total\"> / 325</span></strong></div><div class=\"ds-budget-track\"><div class=\"ds-budget-fill\" style=\"width:51.7%\"></div></div><p class=\"ds-budget-status\">Còn 157 viên để sáng tạo thêm</p></section>",
+      "css": ".ds-budget{font-family:\"Be Vietnam Pro\",sans-serif;padding:22px;background:#f8fafb;color:var(--ink,#172d40)}.ds-budget-heading{display:flex;align-items:center;justify-content:space-between;font-size:11px}.ds-budget-count{font-size:19px;font-variant-numeric:tabular-nums}.ds-budget-total{font-size:12px;font-weight:400;color:var(--muted,#536574)}.ds-budget-track{height:6px;border-radius:8px;background:#e0e7e3;margin-top:12px;overflow:hidden}.ds-budget-fill{height:100%;border-radius:8px;background:#5e8567}.ds-budget-status{margin:10px 0 0;color:#496c50;font-size:10px;line-height:1.6}.ds-budget.ds-over .ds-budget-fill{background:#bf491d}.ds-budget.ds-over .ds-budget-status{color:#a1401c}@media(max-width:800px){.ds-budget{padding:18px}.ds-budget-heading{font-size:12px}.ds-budget-status{font-size:12px}}"
+    }
+  ],
+  "narrative": {
+    "northStar": "The Brick-Building Instruction Desk",
+    "overview": "Wallcraft pairs paper-white controls and pale blue workspace with navy ink, orange selections and a green village grid. Its character is practical, calm and playful: the layout reads as a construction booklet, while actual game sprites make the result recognizable.\n\nDense settings stay subordinate to the work surface. Counts, dimensions and named states make each change legible; the plan and village views represent the same discrete wall cells.",
+    "keyCharacteristics": [
+      "Countable cells and visible material budgets.",
+      "White control surfaces around a dominant green canvas.",
+      "Compact Vietnamese typography and clear selected states.",
+      "A persistent mobile preview with refinements disclosed on demand."
+    ],
+    "rules": [
+      {
+        "name": "Countable Mark",
+        "body": "Every wall shown represents one actual grid cell; previews and exports must preserve the same coordinates.",
+        "section": "overview"
+      },
+      {
+        "name": "Functional Orange",
+        "body": "Use orange for active tools, selected motifs, focus and the brand dot; keep the export action navy.",
+        "section": "colors"
+      },
+      {
+        "name": "Complete Village",
+        "body": "Keep the full grid and tall building sprites inside the canvas, including headroom above the far corner.",
+        "section": "layout"
+      }
+    ],
+    "dos": [
+      "Do preserve visible counts, dimensions and readiness beside the design.",
+      "Do keep plan and village views synchronized with the same cells.",
+      "Do retain the sticky mobile preview, collapsed refinements and coordinate controls.",
+      "Do pair color states with labels, icons or pressed-state semantics.",
+      "Do use the self-hosted Vietnamese font and respect reduced motion."
+    ],
+    "donts": [
+      "Don't crop tall buildings or silently omit walls to fit a preview.",
+      "Don't use orange as the default fill for every action.",
+      "Don't make precise cell editing depend only on dragging.",
+      "Don't hide invalid or empty states behind an enabled export action."
+    ]
+  }
+}

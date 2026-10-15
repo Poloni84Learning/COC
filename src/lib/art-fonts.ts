@@ -249,7 +249,12 @@ export function artGlyphs(font: DesignOptions["font"]): ScriptFont {
     ...Object.keys(library.recipes),
   ])) {
     const pixels = composePixels(char, font)!;
-    const advance = glyphs[char]?.advance ?? glyphs.i.advance;
+    // Pixel-based advance: (maxX - minX + 1 + gap) / pixelUnit
+    // TTF advances mismatch pixel data, causing unreadable spacing.
+    const xs = pixels.map(([x]) => x);
+    const pxWidth = Math.max(...xs) - Math.min(...xs) + 1;
+    const gapPx = 1;
+    const advance = (pxWidth + gapPx) / supporting.pixelUnit;
     // One fixed origin and baseline per font. Never align a letter by its crop.
     glyphs[char] = {
       advance,

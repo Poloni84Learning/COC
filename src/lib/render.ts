@@ -74,8 +74,11 @@ export function paint(
   const unit = Math.min((width - 64) / GRID, (height - 64) / GRID),
     ox = (width - GRID * unit) / 2,
     oy = (height - GRID * unit) / 2;
+  // Blueprint (2D) uses diamond projection (rotated 45°) like the 3D ground,
+  // but draws flat solid diamonds instead of 3D wall images.
+  const useDiamond = true;
   const project = (x: number, y: number) =>
-    o.isometric
+    o.isometric || useDiamond
       ? iso(x, y, width, height)
       : { x: ox + x * unit, y: oy + y * unit, unit };
   const tile = (

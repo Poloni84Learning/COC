@@ -1,9 +1,9 @@
-import { ART_FONTS, normalizeText } from "../lib/art-fonts";
+import { autoFit, bounds, DEFAULT_OPTIONS, generate } from "../lib/engine";
+import { normalizeText } from "../lib/art-fonts";
 import type { DesignOptions } from "../types";
 
-/** Font picker preview: smooth vector text from the actual font file,
- * not the discrete wall cells. What you pick is the typeface; the walls
- * built from it are shown on the main canvas. */
+/** Font picker preview: crisp square cells (pixel grid) showing how the
+ * typeface maps to wall blocks. High contrast, no anti-aliasing blur. */
 export default function LetterPreview({
   font,
   text,
@@ -11,22 +11,41 @@ export default function LetterPreview({
   font: DesignOptions["font"];
   text: string;
 }) {
-  const name = ART_FONTS.find((f) => f.id === font)?.name ?? font;
   const specimen =
     [...normalizeText(text).replace(/\s+/g, "").trim()].slice(0, 6).join("") ||
     "Aa";
+  const options = {
+    ...DEFAULT_OPTIONS,
+    font,
+    frame: "grid" as const,
+    text: specimen,
+    scale: 2,
+    ornaments: false,
+  };
+  const fitted = autoFit(options, Infinity) ?? {
+    ...options,
+    text: [...specimen][0],
+    scale: 1,
+  };
+  const cells = generate(fitted).cells;
+  const b = bounds(cells);
   return (
-    <span
-      aria-hidden="true"
+    <svg
+      viewBox={`${b.minX} ${b.minY} ${b.width} ${b.height}`}
+      shapeRendering="crispEdges"
       className="font-preview"
-      style={{
-        fontFamily: `'${name}', 'Be Vietnam Pro', cursive`,
-        fontSize: "28px",
-        lineHeight: 1.2,
-        whiteSpace: "nowrap",
-      }}
+      aria-hidden="true"
     >
-      {specimen}
-    </span>
+      {cells.map((p) => (
+        <rect
+          key={`${p.x},${p.y}`}
+          x={p.x}
+          y={p.y}
+          width="1"
+          height="1"
+          fill="#1c2b33"
+        />
+      ))}
+    </svg>
   );
 }

@@ -74,13 +74,24 @@ export function paint(
   const unit = Math.min((width - 64) / GRID, (height - 64) / GRID),
     ox = (width - GRID * unit) / 2,
     oy = (height - GRID * unit) / 2;
-  // Blueprint (2D) uses diamond projection (rotated 45°) like the 3D ground,
-  // but draws flat solid diamonds instead of 3D wall images.
+  // Blueprint (2D) uses true top-down 90° diamond projection (rotated 45°,
+  // no vertical compression like isometric). Coordinates follow diamond edges.
   const useDiamond = true;
+  // True top-down diamond: perfect squares rotated 45°, viewed from 90° above.
+  const diamondTopDown = (x: number, y: number) => {
+    const du = Math.min(width / 95, height / 65);
+    return {
+      x: width / 2 + (x - y) * du,
+      y: height * 0.08 + (x + y) * du,
+      unit: du,
+    };
+  };
   const project = (x: number, y: number) =>
-    o.isometric || useDiamond
+    o.isometric
       ? iso(x, y, width, height)
-      : { x: ox + x * unit, y: oy + y * unit, unit };
+      : useDiamond
+        ? diamondTopDown(x, y)
+        : { x: ox + x * unit, y: oy + y * unit, unit };
   const tile = (
     x: number,
     y: number,
@@ -134,9 +145,14 @@ export function paint(
     ctx.font = "9px system-ui";
     ctx.fillStyle = "#c5d6b8";
     ctx.textAlign = "center";
+    // Coordinates follow the diamond edges (rotated 45°)
     for (let i = 0; i < GRID; i += 5) {
-      ctx.fillText(String(i), ox + (i + 0.5) * unit, oy - 9);
-      ctx.fillText(String(i), ox - 14, oy + (i + 0.75) * unit);
+      // Top-left edge: x=i, y=0
+      const p1 = diamondTopDown(i + 0.5, -0.7);
+      ctx.fillText(String(i), p1.x, p1.y);
+      // Top-right edge: x=0, y=i
+      const p2 = diamondTopDown(-0.7, i + 0.5);
+      ctx.fillText(String(i), p2.x, p2.y);
     }
   }
   const wallImage = o.hall.wallImage ? cache.get(o.hall.wallImage) : undefined;

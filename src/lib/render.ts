@@ -175,8 +175,10 @@ export function paint(
           bh,
         );
       } else {
-        // Flat 2D: full solid cells, high contrast.
-        tile(object.x, object.y, 1, 1, "#eef3ea");
+        // 2D: diamonds at 85% cell size (like Python sample, ty_le_o_den=0.85).
+        // Centered with small gap around each diamond.
+        const s = 0.85, o = (1 - s) / 2;
+        tile(object.x + o, object.y + o, s, s, "#eef3ea");
       }
     } else {
       tile(

@@ -156,8 +156,8 @@ export function paint(
           bh,
         );
       } else {
-        tile(object.x + 0.08, object.y + 0.08, 0.84, 0.84, "#c9ac64");
-        tile(object.x + 0.08, object.y + 0.08, 0.84, 0.23, "#f0db98");
+        // Flat 2D: full solid cells, high contrast like the pixel samples.
+        tile(object.x, object.y, 1, 1, "#eef3ea");
       }
     } else {
       tile(

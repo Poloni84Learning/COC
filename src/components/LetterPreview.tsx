@@ -23,7 +23,7 @@ export default function LetterPreview({
   const canvas = useRef<HTMLCanvasElement>(null);
   const name = ART_FONTS.find((f) => f.id === font)?.name ?? font;
   const specimen =
-    [...normalizeText(text).replace(/\s+/g, "").trim()].slice(0, 4).join("") ||
+    [...normalizeText(text).replace(/\s+/g, "").trim()].slice(0, 2).join("") ||
     "Aa";
 
   useEffect(() => {
@@ -33,7 +33,7 @@ export default function LetterPreview({
       font,
       frame: "grid" as const,
       text: specimen,
-      scale: 1,
+      scale: 2,
       ornaments: false,
     };
     const fitted = autoFit(options, Infinity) ?? {
@@ -104,7 +104,7 @@ export default function LetterPreview({
     <canvas
       ref={canvas}
       width={220}
-      height={96}
+      height={120}
       className="font-preview"
       aria-label={`Mẫu 3D chữ ${name}`}
       role="img"

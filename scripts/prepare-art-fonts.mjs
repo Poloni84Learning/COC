@@ -7,14 +7,16 @@ const sources = [
   ["dancing", "dancingscript", "DancingScript[wght].ttf", 700],
   ["allura", "allura", "Allura-Regular.ttf", null],
   ["vibes", "greatvibes", "GreatVibes-Regular.ttf", null],
-  ["lobster", "lobster", "Lobster-Regular.ttf", null],
-  ["playfair", "playfairdisplay", "PlayfairDisplay[wght].ttf", 800],
-  ["coiny", "coiny", "Coiny-Regular.ttf", null],
   ["caveat", "caveat", "Caveat[wght].ttf", 700],
+  ["alexbrush", "alexbrush", "AlexBrush-Regular.ttf", null],
+  ["pinyon", "pinyonscript", "PinyonScript-Regular.ttf", null],
+  ["badscript", "badscript", "BadScript-Regular.ttf", null],
+  ["qwigley", "qwigley", "Qwigley-Regular.ttf", null],
+  ["charmvn", "charm", "Charm-Regular.ttf", null],
 ];
 // Import the supplied libraries directly, including whole-letter R9 recipes.
 // Read the ZIP directory rather than shelling out to a platform-specific unzip.
-const archive = await fs.readFile("docs/all-7-fonts-json.zip");
+const archive = await fs.readFile("docs/all-9-fonts-json.zip");
 let end = archive.length - 22;
 while (
   end >= Math.max(0, archive.length - 65557) &&
@@ -227,7 +229,7 @@ for (const [id, folder, file, weight] of sources) {
 await fs.writeFile("src/lib/art-glyphs.json", JSON.stringify(output));
 await fs.writeFile(
   `${directory}/SOURCES.md`,
-  "# Vietnamese and English lettering\n\nPixel letters and recipes: docs/all-7-fonts-json.zip, composed according to docs/quy-tac-ghep.md. These are the authoritative letter shapes.\n\nSIL Open Font License; each supporting font license is included beside its font.\n\n" +
+  "# Vietnamese and English lettering\n\nPixel letters and recipes: docs/all-9-fonts-json.zip, composed according to docs/quy-tac-ghep.md. These are the authoritative letter shapes.\n\nSIL Open Font License; each supporting font license is included beside its font.\n\n" +
     sources
       .map(
         ([id, folder, file]) =>

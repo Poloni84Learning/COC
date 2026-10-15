@@ -2,7 +2,7 @@
 
 Web đã được xây trong kho này. Chạy `npm install`, `npm run dev`, rồi mở http://127.0.0.1:5173.
 
-Tạo chữ từ nội dung tiếng Việt hoặc tiếng Anh bất kỳ bằng 7 phông trong `docs/all-7-fonts-json.zip`: Dancing Script, Allura, Great Vibes, Lobster, Playfair Display, Coiny và Caveat. Ghép chữ và dấu theo `docs/quy-tac-ghep.md`, giữ hoa/thường, đường chân chữ và khoảng cách của phông. Các nút từ mẫu và thư viện hình đã được tạm gỡ khỏi giao diện. Dựng theo trục chéo 45° để đọc từ góc nhìn game hoặc theo ô vuông. Tính tường theo TH1–TH18, chặn toàn bộ mẫu vượt lưới/số tường, xem làng 3D, xếp công trình/bẫy, chỉnh tay, chia sẻ mẫu web và xuất PNG/JSON/CSV. Link base nhập vào game phải được tạo trong COC; có thể gắn link thật vào mẫu.
+Tạo chữ từ nội dung tiếng Việt hoặc tiếng Anh bất kỳ bằng 9 phông trong `docs/all-9-fonts-json.zip`: Dancing Script, Allura, Great Vibes, Caveat, Alex Brush, Pinyon Script, Bad Script, Qwigley và Charm. Ghép chữ và dấu theo `docs/quy-tac-ghep.md`, giữ hoa/thường, đường chân chữ và khoảng cách của phông. Các nút từ mẫu và thư viện hình đã được tạm gỡ khỏi giao diện. Dựng theo trục chéo 45° để đọc từ góc nhìn game hoặc theo ô vuông. Tính tường theo TH1–TH18, chặn toàn bộ mẫu vượt lưới/số tường, xem làng 3D, xếp công trình/bẫy, chỉnh tay, chia sẻ mẫu web và xuất PNG/JSON/CSV. Link base nhập vào game phải được tạo trong COC; có thể gắn link thật vào mẫu.
 
 Hướng dẫn đầy đủ: [docs/WALLCRAFT.md](docs/WALLCRAFT.md). Nghiên cứu link base: [docs/link-base-research.md](docs/link-base-research.md).
 

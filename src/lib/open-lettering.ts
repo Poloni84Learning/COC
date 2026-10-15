@@ -34,7 +34,7 @@ export function openLetter(
   const base = char;
   if (!paths[base]) return null;
   const body = paths[base].map(curvePath);
-  const slant = font === "charm" ? 0 : font === "allura" ? 0.08 : 0.14;
+  const slant = font === "charm" || font === "charmvn" ? 0 : font === "allura" ? 0.08 : 0.14;
   return {
     paths: body.map((p) => p.map(([x, y]) => [(x - y * slant) / 17, y / 17])),
     advance:

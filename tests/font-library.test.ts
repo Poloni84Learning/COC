@@ -25,10 +25,20 @@ import type { Blueprint } from "../src/types";
 const signature = (pixels: number[][]) =>
   [...new Set(pixels.map((p) => p.join(",")))].sort().join(";");
 
-test("all seven supplied libraries cover every Vietnamese and English letter", () => {
+test("all nine supplied libraries cover every Vietnamese and English letter", () => {
   assert.deepEqual(
     ART_FONTS.map((f) => f.id),
-    ["dancing", "allura", "vibes", "lobster", "playfair", "coiny", "caveat"],
+    [
+      "dancing",
+      "allura",
+      "vibes",
+      "caveat",
+      "alexbrush",
+      "pinyon",
+      "badscript",
+      "qwigley",
+      "charmvn",
+    ],
   );
   for (const { id: font } of ART_FONTS) {
     const library = pixelLibrary(font);
@@ -79,8 +89,14 @@ test("R6 removes the top dot from ị while retaining its body and dot below", (
 
 test("source placeholder and ambiguous recipes are recovered into distinct vowels", () => {
   assert.equal(repairedCharacters("caveat").size, 44);
-  assert.equal(repairedCharacters("coiny").size, 2);
   assert.equal(repairedCharacters("dancing").size, 2);
+  assert.equal(repairedCharacters("alexbrush").size, 6);
+  assert.equal(repairedCharacters("allura").size, 0);
+  assert.equal(repairedCharacters("vibes").size, 0);
+  assert.equal(repairedCharacters("pinyon").size, 0);
+  assert.equal(repairedCharacters("badscript").size, 0);
+  assert.equal(repairedCharacters("qwigley").size, 0);
+  assert.equal(repairedCharacters("charmvn").size, 0);
   for (const { id: font } of ART_FONTS)
     for (const family of vowelRows) {
       const glyphs = family.map((char) =>
@@ -93,7 +109,7 @@ test("source placeholder and ambiguous recipes are recovered into distinct vowel
 test("whole-letter R9 artwork and the fixed font baseline are preserved", () => {
   for (const [font, char] of [
     ["vibes", "Đ"],
-    ["coiny", "Ẽ"],
+    ["charmvn", "Đ"],
   ] as const) {
     const library = pixelLibrary(font);
     assert.ok(library.recipes[char][0].startsWith("nguyen|"));

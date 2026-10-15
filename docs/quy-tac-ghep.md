@@ -148,14 +148,16 @@ kích thước khung, vị trí baseline và cách vẽ dấu — bảng dưới
 | Dancing Script | 71×41 | 24 | 0.02736 | 134/134 | 0 | 211 |
 | Allura | 74×42 | 25 | 0.02857 | 134/134 | 0 | 206 |
 | Great Vibes | 81×47 | 28 | 0.03144 | 133/134 | 1 (Đ) | 259 |
-| Lobster | 70×40 | 24 | 0.02701 | 134/134 | 0 | 278 |
-| Playfair Display | 57×33 | 19 | 0.02219 | 134/134 | 0 | 206 |
-| Coiny | 57×32 | 19 | 0.02198 | 133/134 | 1 (Ẽ) | 225 |
 | Caveat | 87×50 | 30 | 0.03357 | 91/134 | 43 | 248 |
+| Alex Brush | 74×43 | 25 | 0.02857 | 129/134 | 5 (í ì ỉ ĩ ị) | 190 |
+| Pinyon Script | 68×39 | 23 | 0.02629 | 129/134 | 5 (í ì ỉ ĩ ị) | 176 |
+| Bad Script | 77×44 | 26 | 0.02971 | 129/134 | 5 (í ì ỉ ĩ ị) | 231 |
+| Qwigley | 101×58 | 35 | 0.04000 | 129/134 | 5 (í ì ỉ ĩ ị) | 300 |
+| Charm | 73×42 | 25 | 0.02857 | 128/134 | 6 (í ì ỉ ĩ ị, Đ) | 214 |
 
 Thư viện từng font nằm ở `phong-chu/<tag>/thu-vien-tieng-viet.json`
 (kèm `demo-ghep.png`, `kiem-chung.png`, `quynh-44x44-diamond.png`).
-Ảnh so sánh chữ "Quỳnh" cả 7 font: `phong-chu/so-sanh-7-font.png`.
+Ảnh so sánh chữ "Quỳnh" các font: `phong-chu/so-sanh-7-font.png` (bản 7 font cũ).
 
 ### Ghi chú từng font
 
@@ -164,14 +166,16 @@ Thư viện từng font nằm ở `phong-chu/<tag>/thu-vien-tieng-viet.json`
   1px ở viền nét (mắt thường không thấy được).
 - **Great Vibes** — nét bay bướm, dấu thanh mảnh; chữ `Đ` hoa được lưu nguyên
   vì gạch ngang chạm/đè lên nét chữ gốc.
-- **Lobster** — nét đậm retro; họ `ê` (ế ề ể ễ ệ...) lệch đều 2px ở chỗ mũ giao
-  với nét chữ — là đặc trưng raster của font, không ảnh hưởng thẩm mỹ.
-- **Playfair Display** — serif tương phản cao (nét ngang mảnh, nét dọc đậm);
-  khung chữ gọn nhất (57×33); dấu thanh mảnh, đặt cao thoáng.
-- **Coiny** — tròn trịa, vui nhộn; dấu to và đặt sát chữ; `Ẽ` lưu nguyên.
 - **Caveat** — chữ viết tay: font **vẽ lại nét gốc theo từng dấu** (43/134 chữ
   lưu nguyên, gồm cả họ `i`+thanh và nhiều chữ hoa). Đây là đặc tính bình
   thường của font handwriting, không phải lỗi quy tắc.
+- **Alex Brush** — thư pháp hiện đại, nét thanh lịch; họ `i`+thanh (í ì ỉ ĩ ị)
+  lưu nguyên chữ theo R6.
+- **Pinyon Script** — thư pháp cổ điển, nét mảnh; họ `i`+thanh lưu nguyên.
+- **Bad Script** — viết tay phóng khoáng, nét đậm; họ `i`+thanh lưu nguyên.
+- **Qwigley** — thư pháp mảnh, khung chữ lớn nhất (101×58); họ `i`+thanh
+  lưu nguyên.
+- **Charm** — thư pháp Việt, nét đậm rõ; họ `i`+thanh và `Đ` lưu nguyên.
 
 ### R9 — Ngoại lệ "lưu nguyên chữ"
 

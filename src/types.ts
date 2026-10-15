@@ -42,10 +42,12 @@ export type DesignOptions = {
     | "dancing"
     | "allura"
     | "vibes"
-    | "lobster"
-    | "playfair"
-    | "coiny"
-    | "caveat";
+    | "caveat"
+    | "alexbrush"
+    | "pinyon"
+    | "badscript"
+    | "qwigley"
+    | "charmvn";
   flourish: "none" | "swash" | "blade";
   stroke: "light" | "original";
   ornaments: boolean;

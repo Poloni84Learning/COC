@@ -2,10 +2,12 @@ import outlines from "./art-glyphs.json";
 import dancing from "./font-library/dancing-thu-vien-tieng-viet.json";
 import allura from "./font-library/allura-thu-vien-tieng-viet.json";
 import vibes from "./font-library/greatvibes-thu-vien-tieng-viet.json";
-import lobster from "./font-library/lobster-thu-vien-tieng-viet.json";
-import playfair from "./font-library/playfair-thu-vien-tieng-viet.json";
-import coiny from "./font-library/coiny-thu-vien-tieng-viet.json";
 import caveat from "./font-library/caveat-thu-vien-tieng-viet.json";
+import alexbrush from "./font-library/alexbrush-thu-vien-tieng-viet.json";
+import pinyon from "./font-library/pinyon-thu-vien-tieng-viet.json";
+import badscript from "./font-library/badscript-thu-vien-tieng-viet.json";
+import qwigley from "./font-library/qwigley-thu-vien-tieng-viet.json";
+import charmnv from "./font-library/charmvn-thu-vien-tieng-viet.json";
 import type { DesignOptions } from "../types";
 
 export type Point = [number, number];
@@ -24,10 +26,12 @@ const libraries: Record<DesignOptions["font"], PixelLibrary> = {
   dancing,
   allura,
   vibes,
-  lobster,
-  playfair,
-  coiny,
   caveat,
+  alexbrush,
+  pinyon,
+  badscript,
+  qwigley,
+  "charmvn": charmnv,
 };
 export const ART_FONTS: {
   id: DesignOptions["font"];
@@ -50,20 +54,34 @@ export const ART_FONTS: {
     description: "Thư pháp bay bướm, đuôi chữ lượn dài",
   },
   {
-    id: "lobster",
-    name: "Lobster",
-    description: "Chữ nối retro, nét đậm và gọn",
-  },
-  {
-    id: "playfair",
-    name: "Playfair Display",
-    description: "Chữ có chân, nét thanh–đậm tương phản",
-  },
-  { id: "coiny", name: "Coiny", description: "Chữ tròn, vui nhộn và rõ nét" },
-  {
     id: "caveat",
     name: "Caveat",
     description: "Chữ viết tay tự nhiên, dáng nghiêng nhẹ",
+  },
+  {
+    id: "alexbrush",
+    name: "Alex Brush",
+    description: "Thư pháp hiện đại, nét thanh lịch",
+  },
+  {
+    id: "pinyon",
+    name: "Pinyon Script",
+    description: "Thư pháp cổ điển, nét mảnh bay bướm",
+  },
+  {
+    id: "badscript",
+    name: "Bad Script",
+    description: "Chữ viết tay phóng khoáng, nét đậm tự nhiên",
+  },
+  {
+    id: "qwigley",
+    name: "Qwigley",
+    description: "Thư pháp mảnh, thanh thoát",
+  },
+  {
+    id: "charmvn",
+    name: "Charm",
+    description: "Thư pháp Việt, nét đậm rõ ràng",
   },
 ];
 

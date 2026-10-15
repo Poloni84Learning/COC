@@ -122,17 +122,69 @@ export function paint(
       ctx.stroke();
     }
   };
-  for (let y = 0; y < GRID; y++)
-    for (let x = 0; x < GRID; x++)
-      tile(
-        x,
-        y,
-        1,
-        1,
-        (x + y) % 2 ? "#4a6a49" : "#4e704d",
-        o.showGrid ? "#65805b" : undefined,
-      );
-  tile(0, 0, GRID, GRID, undefined, "#92a67a");
+  // 2D diamond grid: draw diagonal LINES like Python (not filled cells).
+  // Matches tao_mau_thoi.py: 1px gray lines at 45°, diamond boundary.
+  const drawDiamondGrid = () => {
+    // Clip to diamond shape (like Python mask)
+    const dc = [
+      diamondTopDown(0, 0),
+      diamondTopDown(GRID, 0),
+      diamondTopDown(GRID, GRID),
+      diamondTopDown(0, GRID),
+    ];
+    ctx.save();
+    ctx.beginPath();
+    ctx.moveTo(dc[0].x, dc[0].y);
+    for (let i = 1; i < 4; i++) ctx.lineTo(dc[i].x, dc[i].y);
+    ctx.closePath();
+    ctx.clip();
+
+    if (o.showGrid) {
+      ctx.strokeStyle = "#65805b";
+      ctx.lineWidth = 0.6;
+      // Diagonal lines: two directions
+      for (let i = -GRID; i <= GRID * 2; i++) {
+        const a1 = diamondTopDown(i, 0);
+        const b1 = diamondTopDown(i + GRID, GRID);
+        ctx.beginPath();
+        ctx.moveTo(a1.x, a1.y);
+        ctx.lineTo(b1.x, b1.y);
+        ctx.stroke();
+        const a2 = diamondTopDown(0, i);
+        const b2 = diamondTopDown(GRID, i + GRID);
+        ctx.beginPath();
+        ctx.moveTo(a2.x, a2.y);
+        ctx.lineTo(b2.x, b2.y);
+        ctx.stroke();
+      }
+    }
+    ctx.restore();
+
+    // Diamond boundary (44x44)
+    ctx.strokeStyle = "#92a67a";
+    ctx.lineWidth = 1.2;
+    ctx.beginPath();
+    ctx.moveTo(dc[0].x, dc[0].y);
+    for (let i = 1; i < 4; i++) ctx.lineTo(dc[i].x, dc[i].y);
+    ctx.closePath();
+    ctx.stroke();
+  };
+
+  if (!o.isometric && useDiamond) {
+    drawDiamondGrid();
+  } else {
+    for (let y = 0; y < GRID; y++)
+      for (let x = 0; x < GRID; x++)
+        tile(
+          x,
+          y,
+          1,
+          1,
+          (x + y) % 2 ? "#4a6a49" : "#4e704d",
+          o.showGrid ? "#65805b" : undefined,
+        );
+    tile(0, 0, GRID, GRID, undefined, "#92a67a");
+  }
   // Fail closed. Never show a plausible partial layout by filtering bad cells.
   if (o.walls.some((p) => !inside(p)) || o.walls.length > o.hall.walls) {
     ctx.fillStyle = "#fff";

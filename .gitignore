@@ -4,6 +4,7 @@ node_modules/
 # Build output and tool caches (Vite / TypeScript)
 /dist/
 .vite/
+.vite-temp/
 *.tsbuildinfo
 .cache/
 
@@ -29,6 +30,17 @@ pnpm-debug.log*
 
 # Local review artifacts
 .impeccable/review/
+
+# Local patch exports and merge leftovers
+/*.patch
+/*.diff
+*.orig
+*.rej
+
+# Temporary files
+*.tmp
+*.temp
+*.bak
 
 # Editor and operating-system files
 .idea/

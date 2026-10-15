@@ -69,7 +69,9 @@ export function paint(
   canvas.width = Math.round(width * dpr);
   canvas.height = Math.round(height * dpr);
   ctx.scale(dpr, dpr);
-  ctx.fillStyle = "#304a39";
+  // 2D blueprint matches Python sample: white background, black diamonds.
+  // 3D keeps the dark village theme.
+  ctx.fillStyle = o.isometric ? "#304a39" : "#ffffff";
   ctx.fillRect(0, 0, width, height);
   const unit = Math.min((width - 64) / GRID, (height - 64) / GRID),
     ox = (width - GRID * unit) / 2,
@@ -129,10 +131,14 @@ export function paint(
         y,
         1,
         1,
-        (x + y) % 2 ? "#4a6a49" : "#4e704d",
-        o.showGrid ? "#65805b" : undefined,
+        o.isometric
+          ? (x + y) % 2
+            ? "#4a6a49"
+            : "#4e704d"
+          : "#ffffff",
+        o.showGrid ? (o.isometric ? "#65805b" : "#c3c3c3") : undefined,
       );
-  tile(0, 0, GRID, GRID, undefined, "#92a67a");
+  tile(0, 0, GRID, GRID, undefined, o.isometric ? "#92a67a" : "#888888");
   // Fail closed. Never show a plausible partial layout by filtering bad cells.
   if (o.walls.some((p) => !inside(p)) || o.walls.length > o.hall.walls) {
     ctx.fillStyle = "#fff";
@@ -143,7 +149,7 @@ export function paint(
   }
   if (o.showCoordinates && !o.isometric) {
     ctx.font = "9px system-ui";
-    ctx.fillStyle = "#c5d6b8";
+    ctx.fillStyle = "#666666";
     ctx.textAlign = "center";
     // Coordinates follow the diamond edges (rotated 45°)
     for (let i = 0; i < GRID; i += 5) {
@@ -175,8 +181,8 @@ export function paint(
           bh,
         );
       } else {
-        // Flat 2D: full solid cells, high contrast like the pixel samples.
-        tile(object.x, object.y, 1, 1, "#eef3ea");
+        // 2D blueprint: black diamonds on white, exactly like Python sample.
+        tile(object.x, object.y, 1, 1, "#1a1a1a");
       }
     } else {
       tile(
